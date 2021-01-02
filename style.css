@@ -1,7 +1,69 @@
-html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
+*, *::before, *after {
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+.body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  display: flex;
+  width: 100vw;
+  height: 100vw;
   padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color:lightcoral;
+}
+
+#question {
+  margin-left: 10px; 
+  font-size:30px;
+  color:black;
+}
+
+.questionContainer {
+  max-width: 100%;
+  background-color:rgb(77, 139, 115);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:28px;
+  color:white;
+  background-color: rgb(22, 22, 102);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  border-color: yellow;
+}
+
+.start-btn {
+  font-size:40px;
+  color:white;
+  background-color: rgb(36, 158, 111);
+}
+
+.next-btn {
+  font-size:40px;
+  color:white;
+  background-color: rgb(77, 139, 115);
+  float: right;
+}
+.scoreboard, .timer {
+  color: black;
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
 }

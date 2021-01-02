@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz!</title>
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
-    <script src="script.js"></script>
+  <header>
+    <h1 class="text-center my-3">Coding Quiz</h1>
+  </header>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-10 text-start">
+        <a href="./scoreboard.html">Scoreboard</a></div>
+       <div class="col-sm-2 float text-end">
+         Timer:<div id="miliseconds"></div>
+      </div>   
+</div>
+
+
+
+<div class="questionContainer hide">
+  <div id="question-container" class="hide">
+<div id="question">Question1</div>
+<div id="answer-btns" class="answerBtns">
+  <button class="btn">Answer1</button>
+  <button class="btn">Answer2</button>
+  <button class="btn">Answer3</button>
+  <button class="btn">Answer4</button>
+</div>
+  </div>
+</div>
+    <button id="start-btn" class="start-btn btn">Start</button>
+    <button id="next-btn" class="next-btn btn hide ">Next</button>
+  <div class="Stefanie"></div>
+
+
+
+<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Bootstrap's javascript file that allows the nav menu to work  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
   </body>
+  
 </html>
