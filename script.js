@@ -9,6 +9,7 @@ var ans2El = document.getElementById('ans2');
 var ans3El = document.getElementById('ans3');
 var ans4El = document.getElementById('ans4');
 var ansBtnEl = document.getElementById('answer-buttons');
+var gameOvrEl = document.getElementById('gameover');
 
 var questionCounter = 0;
 
@@ -39,9 +40,18 @@ console.log(questions[questionCounter].answers[0].correct);
 //When start button is clicked, run startGame function
 startBtn.addEventListener('click', startGame);
 
+//Begins game: hide start button, reset index to 0 & use random # to shuffle questions
+function startGame() {
+    startBtn.classList.add('hide');
+    instrEl.classList.add('hide');
+    quesContainEl.classList.remove('hide');
+    countdown();
+    nextQuestion();
+}
+
 //Timer function starts at :25 and game ends at :0.
-function countdown() {
-    var secondsLeft = 15;
+function countdown(timer) {
+    var secondsLeft =2;
     timerEl.textContent = ":" + secondsLeft + " seconds";
 
 var timeInterval = setInterval(function (timer) {
@@ -57,19 +67,9 @@ var timeInterval = setInterval(function (timer) {
     if (secondsLeft===0) {
         clearInterval(timeInterval);
         timerEl.textContent = "";
-        timerEl.textContent = "GAME OVER";
         endGame();
     }
 }, 1000);
-}
-
-//Begins game: hide start button, reset index to 0 & use random # to shuffle questions
-function startGame() {
-    startBtn.classList.add('hide');
-    instrEl.classList.add('hide');
-    quesContainEl.classList.remove('hide');
-    countdown();
-    nextQuestion();
 }
 
 //Presents user with next question
@@ -81,23 +81,13 @@ function nextQuestion() {
     ans4El.textContent = questions[questionCounter].answers[3].answer;
 }
 
-// //Determines answer
-// function selectAnswer() {}
+//Determines answer
+function selectAnswer() {
 
-// //Set time
-// // function setTime() {
-//     var timerInterval = setInterval(function() {
-//         secondsLeft--;
-//         timerElement.textContent = "Timer: " + secondsLeft;
+}
 
-//         if(secondsLeft === 0 {
-//             clearInterval(timerInterval);
-//             endGame();
-//         })
-//     })
-// }
 
-// function endGame () {
-//     //display photo
-// }
-
+function endGame (displayImg) {
+    quesContainEl.classList.add('hide');
+    gameOvrEl.classList.remove('hide');
+}
