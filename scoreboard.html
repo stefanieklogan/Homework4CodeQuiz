@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Code Quiz Scoreboard</title>
+    <title>Scoreboard:Code Quiz</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
-    
-    <script src="script.js"></script>
+  <header>
+    <h1 class="text-center my-6">Scoreboard</h1>
+  </header>
+  <div class="container">
+
+<div class="questionContainer"></div>
+<div class="col-sm-6 blockquote text-center bestScore my-5" id="bestScore">BEST</div> 
+<button class="btn text-center">Try again</button>
+<button class="btn text-center">Clear scores</button>
+</div>
+
+
+
+<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Bootstrap's javascript file that allows the nav menu to work  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
   </body>
+  
 </html>
