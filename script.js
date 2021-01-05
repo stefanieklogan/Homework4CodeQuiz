@@ -1,5 +1,7 @@
 //Establish variables for use in different functions
 var startBtn = document.getElementById('start-btn');
+var scoreEl = document.getElementById('score');
+var displayedQEl = document.getElementById('displayedQ');
 var timerEl = document.getElementById('timer');
 var scoreEl = document.getElementById('score');
 var quesContainEl = document.getElementById('question-container');
@@ -11,7 +13,9 @@ var ans2El = document.getElementById('ans2');
 var ans3El = document.getElementById('ans3');
 var ans4El = document.getElementById('ans4');
 var ansBtnEl = document.getElementById('answer-buttons');
+var finScore = document.getElementById('finalScore');
 var gameOvrEl = document.getElementById('game-over');
+var finscorContEl = document.getElementById('scoreContain');
 
 var questionCounter = 0;
 var score = 0;
@@ -136,4 +140,6 @@ function endGame () {
     gradeEl.classList.add('hide');
     quesContainEl.classList.add('hide');
     gameOvrEl.classList.remove('hide');
+    finScore.numericContent = score;
+    finscorContEl.classList.remove('hide');
 }

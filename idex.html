@@ -18,10 +18,9 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-sm-4 blockquote text-left">
-        <a href="./scoreboard.html">Scoreboard</a></div>
-        <div class="col-sm-4 blockquote text-center" id="score"></div> 
-        <div class="col-sm-4 blockquote text-right" id="timer"></div>
+      <div class="col-sm-3 blockquote text-left"><a href="./scoreboard.html">Scoreboard</a></div>
+        <div class="col-sm-3 blockquote text-center" id="score"></div> 
+        <div class="col-sm-3 blockquote text-right" id="timer"></div>
 </div>
 
 <div class="questionContainer">
@@ -35,11 +34,21 @@
 </div>
 </div>
 </div>
-<div id="instructions">Ready to test your knowledge? Earn 20 points for each correct answer. Be careful, wrong answers will remove :10 seconds from remaining time. Ready? Click START & good luck!</div>
+<div id="instructions">Ready to test your knowledge? Earn 25 points for each correct answer. Be careful, wrong answers will remove :10 seconds from remaining time. Ready? Click START & good luck!</div>
 <div id="correctincorrect" class="font-italic size:80px"></div>
 <img src="./images/gameover.gif" id="game-over" class="hide blockquote text-center" alt="Game Over" width="50%" height="50%"></img>  <div class="controls">
     <button id="start-btn" class="start-btn btn">Start</button>
 </div> 
+</div>
+
+<div class="ScoreContainer my-5" id="scoreContain">
+  <div class="row">
+    <div class="col-sm-3 blockquote text-center">Score:</div>
+    <div class="row">
+      <label for="inputname" class="col-sm-3 blockquote text-center mx-5" id="score">Name:</label></div>
+    <!-- <div class="col-sm-6 blockquote text-left"></div> -->
+    <input type="text">
+      <button class="btn subScore-btn my-1 col-sm-3">Submit</button></div> 
 </div>
 
 
