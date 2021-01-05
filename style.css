@@ -8,12 +8,11 @@
   font-size: 28px;
   display: flex;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   align-items: center;
   justify-content: center;
-  background-color:lightcoral;
 }
 
 #question {
@@ -25,6 +24,7 @@
 .questionContainer {
   max-width: 100%;
   background-color:rgb(77, 139, 115);
+  display: flex;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -41,10 +41,12 @@
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  text-align: center;
 }
 
 .btn:hover {
   border-color: yellow;
+  cursor: pointer;
 }
 
 .start-btn {
@@ -59,6 +61,7 @@
   background-color: rgb(77, 139, 115);
   float: right;
 }
+
 .scoreboard, .timer {
   color: black;
   font-size: 20px;
@@ -66,4 +69,16 @@
 
 .hide {
   display: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  margin-top:15px;
+  margin-bottom: 15px;
+  font-style: italic;
 }
