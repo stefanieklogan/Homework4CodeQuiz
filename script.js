@@ -15,7 +15,8 @@ var ans4El = document.getElementById('ans4');
 var ansBtnEl = document.getElementById('answer-buttons');
 var finScore = document.getElementById('finalScore');
 var gameOvrEl = document.getElementById('game-over');
-var finscorContEl = document.getElementById('scoreContain');
+var finscoreEl = document.getElementById('finalScore');
+var scoreContainEl = document.getElementById('scoreContain');
 
 var questionCounter = 0;
 var score = 0;
@@ -44,8 +45,6 @@ var questions = [
         correct: "===",
     }
 ]
-
-var scoreboard = [{user: "name", number: "score"}];
 
 //When start button is clicked, run startGame function
 startBtn.addEventListener('click', startGame);
@@ -92,6 +91,7 @@ function displayQuestion() {
     ans3El.textContent = questions[questionCounter].answers[2];
     ans4El.textContent = questions[questionCounter].answers[3];
 }
+
 //New variable for all answer buttons
 var userChoiceBtns = document.querySelectorAll(".ansbtn");
 //Adding event listener to detect user's answer/click
@@ -140,6 +140,8 @@ function endGame () {
     gradeEl.classList.add('hide');
     quesContainEl.classList.add('hide');
     gameOvrEl.classList.remove('hide');
-    finScore.numericContent = score;
-    finscorContEl.classList.remove('hide');
+    scoreContainEl.classList.remove('hide');
+    finscoreEl.textContent = "Quiz Score: " + score;
 }
+
+var scoreboard = [{user: "name", number: "score"}];

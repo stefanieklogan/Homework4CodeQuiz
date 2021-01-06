@@ -32,7 +32,7 @@
   padding-top: 10px;
 }
 
-.btn, .subScore-btn {
+.btn, .submit {
   font-family: 'Oswald', sans-serif;
   font-size:28px;
   color:white;
@@ -75,3 +75,26 @@
   margin-bottom: 15px;
   font-style: italic;
 }
+
+/* Container Border */
+.ScoreContainer {
+  display: block;
+  text-align: center;
+  border: 12px solid black;
+  width: 60%;
+  border-radius: 10px;
+  margin-top:10px;
+  }
+
+  #name {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+  #finalScore {
+    font-size:35px;
+    font-weight:bold;
+  }
