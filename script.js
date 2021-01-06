@@ -141,7 +141,7 @@ function endGame () {
     quesContainEl.classList.add('hide');
     gameOvrEl.classList.remove('hide');
     scoreContainEl.classList.remove('hide');
-    finscoreEl.textContent = "Quiz Score: " + score;
+    finscoreEl.textContent = "Score: " + score;
 }
 
 var scoreboard = [{user: "name", number: "score"}];

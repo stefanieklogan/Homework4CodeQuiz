@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
     <title>Code Quiz!</title>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -16,11 +17,10 @@
     <h1 class="text-center my-4">Coding Quiz</h1>
   </header>
   <div class="container">
-
     <div class="row">
-      <div class="col-sm-3 blockquote text-left"><a href="./scoreboard.html">Scoreboard</a></div>
-        <div class="col-sm-3 blockquote text-center score" id="score"></div> 
-        <div class="col-sm-3 blockquote text-right" id="timer"></div>
+      <div class="col-sm-4 blockquote text-left"><a href="./scoreboard.html">Scoreboard</a></div>
+        <div class="col-sm-4 blockquote text-center score" id="score"></div> 
+        <div class="col-sm-4 blockquote text-right" id="timer"></div>
 </div>
 
 <div class="questionContainer">
@@ -34,14 +34,12 @@
 </div>
 </div>
 </div>
-<div id="instructions">Ready to test your knowledge? Earn 25 points for each correct answer. Be careful, wrong answers will remove :10 seconds from remaining time. Ready? Click START & good luck!</div>
+<div id="instructions">Ready to test your knowledge? Earn 25 points for each correct answer. Be careful, wrong answers will remove :05 seconds from remaining time. Ready? Click START & good luck!</div>
 <div id="correctincorrect" class="font-italic size:80px"></div>
-<img src="./images/gameover.gif" id="game-over" class="hide blockquote text-center" alt="Game Over" width="50%" height="50%"></img>  <div class="controls">
+<div class="controls">
     <button id="start-btn" class="start-btn btn">Start</button>
-</div> 
-</div>
-
-<div class="ScoreContainer hide" id="scoreContain">
+<div class="scoreContainer hide" id="scoreContain">
+  <img src="./images/gameover.gif" id="game-over" class="gameimg hide blockquote text-center ml-3" alt="Game Over" width="50%" height="50%"></img>  
   <form>
     <div class="row">
       <div class="col-sm-2"></div>
@@ -59,6 +57,7 @@
     <div class="col-sm-2"></div>
   </div>
   </form>
+</div>
 </div>
 
 
