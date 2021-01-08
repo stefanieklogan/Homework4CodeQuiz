@@ -17,12 +17,19 @@
   </header>
   <div class="container">
 
-<div class="questionContainer"></div>
-<div class="col-sm-6 blockquote text-center bestScore my-5" id="bestScore">BEST</div> 
-<button class="btn text-center">Try again</button>
-<button class="btn text-center">Clear scores</button>
+<div class="scoreboardContainer">
+  <div class="row">
+<div class="col-sm-6 blockquote text-center bestScore my-5" id="scoreList">Score list</div>
+<ul id="scores-list" class="scoresList"></ul>
+  </div>
+  <br>
+  <div class="row">
+<a href="./index.html">
+    <button class="col-sm-6 btn text-center">Try again</button>
+  </a>
+<button id="clearBtn" class="col-sm-6 clearBtn btn text-center">Clear scores</button>
 </div>
-
+</div>
 
 
 <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
@@ -31,7 +38,7 @@
 <!-- Bootstrap's javascript file that allows the nav menu to work  -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<script src="script.js"></script>
+<script src="./scoreboard.js"></script>
+
   </body>
-  
 </html>

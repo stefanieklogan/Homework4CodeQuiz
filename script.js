@@ -17,10 +17,13 @@ var finScore = document.getElementById('finalScore');
 var gameOvrEl = document.getElementById('game-over');
 var finscoreEl = document.getElementById('finalScore');
 var scoreContainEl = document.getElementById('scoreContain');
+var nameInputEl = document.getElementById('name');
+var SubmitbtnEl = document.getElementById('submit-btn');
 
 var questionCounter = 0;
 var score = 0;
 var secondsLeft =12;
+
 
 //My questions, answer options and which answer is true
 var questions = [
@@ -134,6 +137,33 @@ function checkAnswer(userChoice, correctAns) {
     }
 }
 
+var scoreboardArr = [];
+
+
+function init() {
+    var storedNames = JSON.parse(localStorage.getItem("nameArray"));
+
+    if (storedNames !== null) {
+        scoreboardArr = storedNames;
+    }
+}
+
+function storeNames () {
+    localStorage.setItem("nameArray", JSON.stringify(scoreboardArr));
+}
+
+SubmitbtnEl.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var nameText = nameInputEl.value.trim();
+
+    scoreboardArr.push(nameText);
+    nameInputEl.value = "";
+    scoreboardArr.push(score);
+
+    storeNames();
+});
+
 
 function endGame () {
     timerEl.textContent = "Time: " + secondsLeft;
@@ -144,4 +174,5 @@ function endGame () {
     finscoreEl.textContent = "Score: " + score;
 }
 
-var scoreboard = [{user: "name", number: "score"}];
+init();
+console.log(scoreboardArr);
