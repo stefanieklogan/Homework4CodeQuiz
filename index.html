@@ -13,17 +13,17 @@
   </head>
 
   <body>
-  <header>
-    <h1 class="text-center my-4">Coding Quiz</h1>
-  </header>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4 blockquote text-left"><a href="./scoreboard.html">Scoreboard</a></div>
-        <div class="col-sm-4 blockquote text-center score" id="score"></div> 
-        <div class="col-sm-4 blockquote text-right" id="timer"></div>
-</div>
-
-<div class="questionContainer">
+    <header>
+      <h1 class="text-center my-4">Coding Quiz</h1>
+    </header>
+    <div class="container">
+      <div class="row ml-5">
+        <div class="col-sm-4"><a href="./scoreboard.html">Scoreboard</a></div>
+          <div class="col-sm-4 score" id="score"></div> 
+          <div class="col-sm-4" id="timer"></div>
+  </div>
+  
+  <div class="questionContainer text-center px-3 py-3 mx-5 my-2">
   <div id="question-container" class="hide">
 <h2 id="question"></h2>
 <div id="answer-btns" class="answerBtns">
@@ -34,11 +34,13 @@
 </div>
 </div>
 </div>
+<div class="gameContainer mx-5 text-center">
 <div id="instructions">Ready to test your knowledge? Earn 25 points for each correct answer. Be careful, wrong answers will remove :05 seconds from remaining time. Ready? Click START & good luck!</div>
-<div id="correctincorrect" class="font-italic size:80px"></div>
+<div id="correctincorrect" class="text-left font-italic size:80px"></div>
 <div class="controls">
     <button id="start-btn" class="start-btn btn">Start</button>
-<div class="scoreContainer hide" id="scoreContain">
+</div>
+    <div class="scoreContainer hide" id="scoreContain">
   <img src="./images/gameover.gif" id="game-over" class="gameimg hide blockquote text-center ml-3" alt="Game Over" width="50%" height="50%"></img>  
   <form>
     <div class="row">
