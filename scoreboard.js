@@ -5,8 +5,13 @@ var scoresListEl = document.getElementById('scores-list');
 var scoreboard = [];
 
 function renderScoreboard () {
-//Clear scoreboard element
-// renderScoreboard.innerHTML = "";
+//Use JSON.parse to cover text to JS object
+
+var lastScores = JSON.parse(localStorage.getItem("nameText"));
+
+for (var i = 0; i < scoreboardArr.length; i++) {
+    var scoreEntry = scoreboardArr.length;
+}
 
 //Render new li for each score
 for (var i = 0; i < scoreboard.length; i++) {

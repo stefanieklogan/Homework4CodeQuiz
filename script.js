@@ -155,14 +155,18 @@ function storeNames () {
 SubmitbtnEl.addEventListener("click", function(event) {
     event.preventDefault();
 
-    var nameText = nameInputEl.value.trim();
+    var nameText = {
+    name: nameInputEl.value.trim(),
+    score: score
+    };
 
     scoreboardArr.push(nameText);
-    nameInputEl.value = "";
     scoreboardArr.push(score);
+    nameInputEl.value = "";
 
     storeNames();
-});
+    }
+);
 
 
 function endGame () {
