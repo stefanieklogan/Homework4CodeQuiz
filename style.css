@@ -22,9 +22,9 @@
 }
 
 .card {
-  display: block;
+  display: flex;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .questionContainer, .gameimg {
@@ -102,6 +102,6 @@
   }
 
   #finalScore {
-    font-size:35px;
+    font-size:150%;
     font-weight:bold;
   }
