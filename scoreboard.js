@@ -1,16 +1,45 @@
-var scoreListEl = document.getElementById('scoreList');
-var clearBtn = document.getElementById('clearBtn');
-var scoresListEl = document.getElementById('scores-list');
+var scoreboardListEl = document.getElementById('scoreboard-list');
+var clearBtnEl = document.getElementById('clearBtn');
 
-var scoreboard = [];
+var nameArray = [];
 
+function renderScoreboard () {
+    for (var i = 0; i < nameArray.length; i++) {
+    var scoreInfo = nameArray[i];
 
+    var li = document.createElement("li");
+    li.textContent = scoreInfo.score + ": " + scoreInfo.name;
+    li.setAttribute("data-index", i);
 
-//Add clear scores event to form
-// clearBtn.addEventListener('click'), function(event) {
-//    var element = event.target;
+    scoreboardListEl.appendChild(li);
+    console.log("1" + nameArray);
+}}
 
-//    if (element.matches("button") === true) {
-//     todoListEl.innerHTML = "";
-//    }
-// }
+function init() {
+    //JSON.parse to covert text from nameArr
+    var storedScores = JSON.parse(localStorage.getItem("nameArray"));
+    //if scores were retrieved from localStorage, update the arr
+    if (storedScores !== null) {
+        nameArray = storedScores;
+
+    }
+    renderScoreboard();
+    clearBtnEl.addEventListener("click", function(event) {
+        event.preventDefault();
+        scoreboardListEl.innerHTML = "";
+    })
+    }
+
+    function storeScores () {
+        localStorage.setItem("nameArray", JSON.stringify(nameArray));
+    }
+    
+    function sortScores() {
+        nameArray.sort((a, b) => {
+            return a.score - b.score;
+        })
+    };
+    
+    init()
+    sortScores()
+    
