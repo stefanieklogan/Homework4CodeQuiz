@@ -22,7 +22,7 @@ var SubmitbtnEl = document.getElementById('submit-btn');
 
 var questionCounter = 0;
 var score = 0;
-var secondsLeft =120;
+var secondsLeft =20;
 
 
 //My questions, answer options and which answer is true
