@@ -1,18 +1,21 @@
 var scoreboardListEl = document.getElementById('scoreboard-list');
 var clearBtnEl = document.getElementById('clearBtn');
 
-var nameArray = [];
+var nameArray = JSON.parse(localStorage.getItem("nameArray")) || [];
+sortedArray = nameArray.sort(function(a, b){return b.score - a.score});
+console.log(nameArray);
 
 function renderScoreboard () {
-    for (var i = 0; i < nameArray.length; i++) {
-    var scoreInfo = nameArray[i];
+    for (var i = 0; i < sortedArray.length; i++) {
+    var scoreInfo = sortedArray[i]; 
 
     var li = document.createElement("li");
+    // console.log(scoreInfo);
     li.textContent = scoreInfo.score + ": " + scoreInfo.name;
     li.setAttribute("data-index", i);
 
     scoreboardListEl.appendChild(li);
-    console.log("1" + nameArray);
+    // console.log(nameArray);
 }}
 
 function init() {
@@ -22,11 +25,15 @@ function init() {
     if (storedScores !== null) {
         nameArray = storedScores;
 
+        renderScoreboard();
     }
-    renderScoreboard();
+
+    
     clearBtnEl.addEventListener("click", function(event) {
         event.preventDefault();
         scoreboardListEl.innerHTML = "";
+        localStorage.clear();
+        nameArray = [];
     })
     }
 
@@ -34,12 +41,10 @@ function init() {
         localStorage.setItem("nameArray", JSON.stringify(nameArray));
     }
     
-    function sortScores() {
-        nameArray.sort((a, b) => {
-            return a.score - b.score;
-        })
-    };
+    // function sortScores(arr) {
+    //     arr.sort((a, b) => {
+    //         return b-a;
+    //     })
+    // };
     
     init()
-    sortScores()
-    

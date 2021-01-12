@@ -137,7 +137,7 @@ function checkAnswer(userChoice, correctAns) {
     }
 }
 
-var scoreboardArr = [];
+var scoreboardArr = JSON.parse(localStorage.getItem("nameArray")) || [];
 
 
 function init() {
@@ -154,19 +154,24 @@ function storeNames () {
 
 SubmitbtnEl.addEventListener("click", function(event) {
     event.preventDefault();
-
-    var nameText = {
-    name: nameInputEl.value.trim(),
-    score: score
-    };
-
-    scoreboardArr.push(nameText);
-    scoreboardArr.push(score);
-    nameInputEl.value = "";
-
-    storeNames();
+   
+    if (nameInputEl === null) {
+    alert("A name is required. Try again.");
+    return;
     }
+    else {
+    var nameText = {
+        name: nameInputEl.value.trim(),
+        score: score
+        };
+    
+        scoreboardArr.push(nameText);
+        nameInputEl.value = "";
+        alert("Score has been saved.");
+    storeNames();
+    }}
 );
+
 
 
 function endGame () {

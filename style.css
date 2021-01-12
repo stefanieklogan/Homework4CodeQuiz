@@ -21,12 +21,6 @@
   color:black;
 }
 
-.card {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .questionContainer, .gameimg {
   max-width: 90%;
   background-color:rgb(77, 139, 115);
@@ -34,18 +28,23 @@
   border-radius: 10px;
 }
 
-/* Container Border */
 .scoreContainer {
-  display: flex;
-  text-align: center;
-  border: 12px solid black;
-  width: 60%;
-  border-radius: 10px;
-  margin-top:10px;
-  margin-left:14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  border: 12px solid black;
+  width: 70%;
+  border-radius: 10px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  font-family: 'Oswald', sans-serif;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 .btn, .submit {
@@ -79,12 +78,6 @@
 
 .hide {
   display: none;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .instructions {

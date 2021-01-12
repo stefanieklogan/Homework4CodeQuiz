@@ -37,7 +37,9 @@
 
 * I am proud of how much html I wrote myself and debugged. What I mean by that is I have finally grasped the concept of a card/container and the importance of where a < / div > is placed in regards to layout, formatting and more.  
 
-* I still have my inner demons when it comes to time researching format issues. Centering a container on a page keeps me up at night. Let it go, Elsa, let it go.
+* I still have my inner demons when it comes to the time lost researching format issues. Sure, spending 5-15 minutes researching is educational. When you've spent over 30 minutes trying to format something? I've lost faith 30+ minutes of research can be rewarding when it comes to formatting. Centering a container on a page keeps me up at night. Let it go, Elsa, let it go.
+
+* I have a few adolescent family members who I think would enjoy taking a quiz I built. I look forward to making a new copy of this quiz, speeding up the time and seeing who can score the highest!
 
 <a name="learnings"></a>
 ## Additional learnings
@@ -45,7 +47,8 @@
 * You should be coding.
 * You should be coding.
 * You should be coding.
-* You get out of this camp what you put in. You should be coding.
+* You get out of this camp what you put in.
+* You should be coding.
 
 
 <a name="streetcred"></a>
