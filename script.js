@@ -155,11 +155,6 @@ function storeNames () {
 SubmitbtnEl.addEventListener("click", function(event) {
     event.preventDefault();
    
-    if (nameInputEl === null) {
-    alert("A name is required. Try again.");
-    return;
-    }
-    else {
     var nameText = {
         name: nameInputEl.value.trim(),
         score: score
@@ -169,7 +164,7 @@ SubmitbtnEl.addEventListener("click", function(event) {
         nameInputEl.value = "";
         alert("Score has been saved.");
     storeNames();
-    }}
+    }
 );
 
 
