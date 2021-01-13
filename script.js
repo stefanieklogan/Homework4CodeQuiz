@@ -25,7 +25,7 @@ var score = 0;
 var secondsLeft =20;
 
 
-//My questions, answer options and which answer is true
+//My questions, answer options and which answer is correct value
 var questions = [
     {
         question: "What does the 'L' in HTML stand for?",
@@ -66,16 +66,17 @@ function startGame() {
 function countdown(timer) {
     timerEl.textContent = ":" + secondsLeft + " seconds";
 
+//Text content for page if multiple seconds are left
 var timeInterval = setInterval(function (timer) {
     secondsLeft--;
     if (secondsLeft>1) {
         timerEl.textContent = ":" + secondsLeft + " seconds";
     }
-
+//Text content for page if one second is left
     if (secondsLeft===1) {
         timerEl.textContent = ":" + secondsLeft + " second";
     }
-
+//Clear text content when game is over
     if (secondsLeft<=0 || questionCounter === questions.length) {
         clearInterval(timeInterval);
         timerEl.textContent = "";
@@ -137,38 +138,37 @@ function checkAnswer(userChoice, correctAns) {
     }
 }
 
+//Create arr for userName & score storage - parse for info
 var scoreboardArr = JSON.parse(localStorage.getItem("nameArray")) || [];
 
-
+//Checking for values in local storage
 function init() {
     var storedNames = JSON.parse(localStorage.getItem("nameArray"));
-
+//If localStorage is not null, values are found within ScoreboardArr
     if (storedNames !== null) {
         scoreboardArr = storedNames;
     }
 }
 
+//Add values to local storage
 function storeNames () {
     localStorage.setItem("nameArray", JSON.stringify(scoreboardArr));
 }
 
+//User to enter name & click submit to add their data to local storage
 SubmitbtnEl.addEventListener("click", function(event) {
     event.preventDefault();
-   
     var nameText = {
         name: nameInputEl.value.trim(),
         score: score
         };
-    
         scoreboardArr.push(nameText);
         nameInputEl.value = "";
-        alert("Score has been saved.");
     storeNames();
     }
 );
 
-
-
+//Final function, un hide a new container and list end score
 function endGame () {
     timerEl.textContent = "Time: " + secondsLeft;
     gradeEl.classList.add('hide');
@@ -179,4 +179,3 @@ function endGame () {
 }
 
 init();
-console.log(scoreboardArr);
